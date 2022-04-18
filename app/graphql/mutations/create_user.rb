@@ -25,24 +25,4 @@ class Mutations::CreateUser < Mutations::BaseMutation
     }
     end
   end
-
-
-=begin
-  def resolve(username:, age:, location:)
-    user = User.new(username: username, age: age, location: location)
-    if user.save
-      {
-        user: user,
-        errors: []
-      }
-    else
-      {
-        user: nil,
-        errors: user.errors.full_messages
-      }
-    end
-  end
-
-=end
-
 end
